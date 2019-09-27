@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "files": [
+    "src",
+    "index.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TonyXiang/my-npm-demo.git"
