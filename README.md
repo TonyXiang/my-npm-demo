@@ -1,3 +1,3 @@
 # my-npm-demo
 
-this is version 1.0.2
+this is version 1.0.5
