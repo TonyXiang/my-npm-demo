@@ -1,3 +1,3 @@
 module.exports = {
-  name: 'my-npm-demo-xl, v1.0.5'
+  name: 'my-npm-demo-xl, v1.0.6'
 }
