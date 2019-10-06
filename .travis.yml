@@ -1,11 +1,27 @@
-language: node_js
+language : node_js
 node_js:
-- '10'
-deploy:
-  provider: npm
-  email: "$NPM_EMAIL"
-  skip_cleanup: true
-  api_key: "$NPM_TOKEN"
-  on:
-    tags: true
-  tag: next
+- "10"
+os:
+- linux
+
+stages:
+- test
+- name: deploy
+
+jobs:
+  include:
+  - stage: test
+    script:
+    - echo "Testing Started ..."
+    - npm test
+    - echo "Testing Finished."
+
+  - stage: deploy
+    deploy:
+      provider: npm
+      email: "$NPM_EMAIL"
+      api_key: "$NPM_TOKEN"
+      skip_cleanup: true
+      on:
+        tags: true
+      tag: next
